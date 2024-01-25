@@ -1,0 +1,272 @@
+/* Client Studio Theme v1.4 (0124) */
+
+/* -------------------------------- 
+     SETUP                         
+   -------------------------------- */
+
+   * {
+      @apply box-border relative min-w-0
+   }
+   
+   body {
+      @apply min-h-dvh font-sans;
+   }
+   
+   html {
+      @apply scroll-smooth;
+   }
+   
+   ::selection {
+      @apply bg-primary/80 text-black
+   }
+   
+   body.admin-bar .main-header { @apply top-12 lg:top-8 }
+   
+   .debug { background: #ff0000;}
+   
+   [type="search"]::-webkit-search-cancel-button,
+   [type="search"]::-webkit-search-decoration {
+     -webkit-appearance: none;
+     appearance: none;
+   }
+   
+   img[data-lazy-src] {
+      @apply opacity-0 blur-lg
+   }
+   
+   img.lazyloaded {
+      @apply blur-none transition-all duration-500 opacity-100;
+   }
+
+
+/* -------------------------------- 
+     TEXT                         
+   -------------------------------- */
+
+
+   p, ul, ol {
+      @apply mb-4 text-base;
+   }
+
+   h1, h1 p {
+      @apply text-5xl md:text-6xl lg:text-8xl tracking-[-0.015em] font-semibold mb-5 leading-normal;
+   }
+
+   h2, h2 p {
+      @apply text-3xl md:text-4xl lg:text-5xl tracking-[-0.01em] font-semibold mb-3;
+   }
+
+   h3, h3 p {
+      @apply text-xl md:text-2xl lg:text-3xl mb-3 font-semibold tracking-[-0.01em];
+   }
+
+   h4, h4 p {
+      @apply text-[0.7rem] font-semibold tracking-wide mb-1.5 uppercase;
+   }
+
+   li {
+      @apply mb-4 list-disc list-inside;
+   }
+
+   p, h1, h2, h3, h4, ul {
+      @apply last:mb-0;
+   }
+
+article {
+   h1,h2,h3 {@apply text-balance}
+   p { @apply text-pretty opacity-90 }
+}
+
+article.lead { 
+   p {
+      @apply text-base font-medium;
+   }
+}
+
+article.single-content {
+   h1, h1 p {
+      @apply text-3xl md:text-4xl lg:text-5xl;
+   }
+
+   h2, h2 p {
+      @apply text-2xl md:text-3xl lg:text-4xl;
+   }
+
+   h3, h3 p, h4, h4 p {
+      @apply text-xl xl:text-2xl md:text-xl;
+   }
+
+   ul { @apply my-5 }
+
+   li {
+      @apply mb-3;
+   }
+
+   blockquote {@apply font-medium lg:p-6}
+
+}
+
+nav ul li { @apply list-none }
+
+/* default border color */
+*,
+::before,
+::after {
+  @apply border-zinc-800;
+}
+
+/* -------------------------------- 
+     CONTENT                         
+   -------------------------------- */
+
+.site-container { 
+   @apply max-w-7xl px-4 sm:px-6 mx-auto relative;
+}
+
+.full-container { 
+   @apply max-w-[1920px] mx-auto relative;
+}
+
+.btn {
+   @apply block whitespace-nowrap px-8 py-3 w-fit rounded-full bg-black hover:bg-neutral-900 font-semibold text-neutral-50 hover:text-white hover:shadow-lg transition-all duration-500;
+
+ 
+   &.btn-arr {
+      @apply after:content-['_→'] after:pl-2 after:-mr-2 after:opacity-50 hover:after:opacity-100 after:inline-block after:text-white after:duration-700
+   }
+
+   &.btn-light {
+      @apply bg-neutral-50 hover:bg-white text-neutral-900 hover:text-black after:text-dark;
+   }
+   
+
+}
+
+.social-icon {
+   @apply text-light hover:opacity-80 transition-colors duration-300 h-5 w-5 mx-2 first:ml-0 last:mr-0;
+}
+
+
+/* -------------------------------- 
+     COOKIES                         
+   -------------------------------- */
+
+#cookie-law-info-bar { @apply shadow-none }
+
+#cookie-law-info-bar[data-cli-type="widget"] {
+   @apply !w-full m-3 !w-auto md:m-0 md:!w-[520px] !max-w-full rounded-xl bottom-0 md:!bottom-5 !right-0 md:!right-4;
+}
+
+h5.cli_messagebar_head { @apply font-medium pb-2 }
+  
+.cli-style-v2 { 
+
+   .cli-bar-message { @apply leading-relaxed}
+
+   .cli-bar-btn_container {
+      @apply pt-3 flex justify-end;
+   }
+
+   a.cli_action_button, a.cli_settings_button { 
+      @apply font-medium rounded px-4 lg:px-6 py-3 transition-colors duration-300;
+   }
+}
+
+.cli_manage_current_consent {
+   @apply underline
+}
+
+.grecaptcha-badge { 
+   visibility: hidden; 
+}
+
+/* -------------------------------- 
+     FORMS                         
+   -------------------------------- */
+
+.wpcf7 {
+   input, textarea {
+      @apply block w-full bg-neutral-200 focus:bg-neutral-50 focus:outline-black placeholder-zinc-400 rounded-md p-4 mt-1;
+   }
+
+   textarea {
+      @apply resize-none h-full;
+      form-sizing: auto;
+      form-sizing: content }
+
+   p, ul {
+      @apply pb-2;
+   }
+
+   input[type=submit] {
+      @apply px-8 py-4 bg-primary hover:brightness-90 transition-all duration-300 font-medium text-black cursor-pointer;
+   }
+}
+
+.wpcf7-response-output {
+   z-index: 9999;
+   @apply m-0 w-full text-center border-0 rounded px-2 animate-pulse text-sm xl:text-base
+}
+
+.wpcf7-not-valid-tip { 
+   @apply text-xs 
+}
+.invalid .wpcf7-response-output { 
+   @apply !border-0 bg-yellow-500 text-yellow-900 w-full !py-2
+}
+.sent .wpcf7-response-output { 
+   @apply !border-0 bg-green-500 text-green-900 w-full !py-2
+}
+.wpcf7-spinner { @apply !hidden }
+
+.form-captcha-text { @apply text-xs p-0 m-0 opacity-50} 
+
+
+
+/* -------------------------------- 
+     MISC.                         
+   -------------------------------- */
+
+.footer-legal ul li { @apply inline-block }
+
+.footer-copyright ul, .footer-copyright p { @apply text-xs }
+
+.footer-copyright ul li { @apply ml-3 }
+
+.anim {
+   @apply transition-all duration-500;
+}
+
+#mobile-menu a {
+   @apply block w-full;
+}
+
+.current_menu_item {
+   @apply opacity-80;
+}
+
+.pagination {
+   @apply site-container;
+   ul {
+      @apply flex -mx-3;
+      li {
+         @apply mx-3;
+      }
+   }
+}
+
+#breadcrumbs { 
+   a {
+      @apply lg:px-3 inline-block; 
+   }
+
+   span.breadcrumb_last {
+      @apply lg:pl-3 opacity-60;  
+   }
+}
+
+
+/* -------------------------------- 
+     CUSTOM                         
+   -------------------------------- */
+

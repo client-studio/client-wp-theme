@@ -1,0 +1,17 @@
+
+body.login {
+ background-color: #dadada;
+ background-image: url('https://client.studio/client/wp/login-bg-2023b.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+
+body.login h1 a { background-image: url('https://client.studio/client/wp/client-logo-wh.png') !important; }
+
+#loginform { border-radius: 15px; border:0; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  }
+
+#nav a, #backtoblog a { color: #fff;}
+
+#login #nav a, #login #backtoblog a { color: #fff !important; }
