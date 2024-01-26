@@ -20,7 +20,7 @@
       @apply bg-primary/80 text-black
    }
    
-   body.admin-bar .main-header { @apply top-12 lg:top-8 }
+   body.admin-bar .site-header { @apply top-12 lg:top-8 }
    
    .debug { background: #ff0000;}
    

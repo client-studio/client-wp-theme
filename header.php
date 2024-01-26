@@ -12,7 +12,7 @@
    <body <?php body_class( 'antialiased bg-body' ); ?>>
       <div id="page" class="min-h-screen">
 
-         <header class="w-full fixed top-0 z-50">
+         <header class="site-header w-full fixed top-0 z-50">
 
             <?php if( have_rows('infobar', 'option') ): while ( have_rows('infobar', 'option') ) : the_row(); ?><?php if ( get_sub_field('show_infobar') ): ?>
 
