@@ -3,7 +3,7 @@
 
    <div class="absolute inset-0">
          <?php $img = get_sub_field('background'); ?><?php if( $img ): ?>
-         <img src="<?php echo $img['sizes']['large']; ?>" class="w-full h-full object-cover" />
+         <img src="<?php echo $img['sizes']['large']; ?>" class="w-full h-full object-cover" alt="<?php echo $img['alt']; ?>" />
          <div class="absolute inset-0 bg-black/20 bg-gradient-to-r from-black/60 to-transparent"></div>
          <?php endif; ?>
       </div>

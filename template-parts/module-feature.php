@@ -5,7 +5,7 @@
          
          <figure class="module-feature__image mb-4 md:mb-0<?php if ( get_sub_field( 'ltr' ) ): ?> md:order-2<?php endif ?>">
             <?php $image = get_sub_field('image'); ?><?php if( $image ): ?>
-            <img src="<?php echo $image['sizes']['large']; ?>" class="max-h-[620px] w-full object-cover rounded-xl" />
+            <img src="<?php echo $image['sizes']['large']; ?>" class="max-h-[620px] w-full object-cover rounded-xl" alt="<?php echo $image['alt']; ?>" />
             <?php endif; ?>
          </figure>
 
